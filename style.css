@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+/* NAVIGATION BAR */
+.nav-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #131921;
+  color: #fff;
+  row-gap: 5rem;
+  padding: 0 4px;
+  font-size: 1rem;
+}
+
+.nav-logo {
+  width: 128px;
+}
+
+.nav-address-cnt {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  column-gap: 5px;
+}
+
+.nav-search {
+  min-width: 50%;
+}
+.nav-form {
+  min-width: 100%;
+  height: 2.7rem;
+  display: flex;
+}
+.nav-form select {
+  width: 9%;
+  padding: 5px;
+  background-color: lightgrey;
+}
+.nav-form input {
+  width: 80%;
+  padding: 0 5px;
+}
+.nav-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8%;
+  border: none;
+  background-color: rgb(205, 139, 26);
+  color: #131921;
+}
+
+.nav-language-container {
+  display: flex;
+  align-items: flex-end;
+}
+.nav-language-container select {
+  border: none;
+  color: white;
+  background-color: #131921;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+.login-container select {
+  border: none;
+  color: white;
+  background-color: #131921;
+}
+
+.return-container {
+  width: 100px;
+}
+.return-container span {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.cart-container {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+/* Responsive Ness */
+
+/* Reducing the search bar  */
+@media (max-width: 1441px) {
+  .nav-search {
+    min-width: 37%;
+  }
+}
+
+@media (max-width: 1125px) {
+  .nav-bar {
+    font-size: 0.8rem;
+  }
+
+  .nav-form input {
+    flex: 1;
+    flex-shrink: 0;
+  }
+
+  .nav-form select {
+    flex-basis: content;
+  }
+
+  .nav-logo {
+    width: 80px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .return-container {
+    width: 50px;
+  }
+
+  .login-container {
+    width: 50px;
+  }
+  .login-option,
+  .login-container select {
+    width: 50px;
+  }
+}
